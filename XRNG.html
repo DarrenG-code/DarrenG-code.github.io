@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<style>
+.output {
+  font-size: 36px
+}
+</style>
+</head>
+
+<body>
+<div>
+<h2>Welcome to Xanthe's Random Number Generator!</h2>
+</div>
+<div>
+<p><b>Please press the button below to select a random number.</b></p>
+</div>
+
+<div class="container">
+<div class="row max-height align-items-center text-center">
+<div class="col">
+<button class="button" onclick="XRNG()">Click Me!</button>
+</div> 
+</div>
+</div>
+
+<div>
+<p class="output" id="demo"></p>
+</div>
+
+<script>
+function XRNG() {
+ document.getElementById("demo").innerHTML = Math.round(100*Math.random());
+}
+</script>
+</body>
+</html>
